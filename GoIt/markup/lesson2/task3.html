@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<form id="form" method="post" action="#">
+		<label for="name">Name</label>
+		<input type="text" id="name"><br>
+		<label for="email">Email</label>
+		<input type="text" id="email">
+		<p>Sex</p>
+		<input type="radio" id="male" value="male"> <label for="male">Male</label>
+		<input type="radio" id="female" value="female"> <label for="female">Female</label>
+		<p>Current status</p>
+		<input type="checkbox" id="student"><label for="student">Student</label><br>
+		<input type="checkbox" id="employed"><label for="employed">Employed</label><br>
+		<input type="checkbox" id="unemployed"><label for="unemployed">Unemployed</label>
+		<p>Month and year of birth</p>
+		<select>
+			<option value="January">January</option>
+			<option value="February">February</option>
+			<option value="August">August</option>
+		</select>
+		<select>
+			<option value="1988">1988</option>
+			<option value="1987">1987</option>
+			<option value="1986">1986</option>
+		</select>
+		<p>Skills and Technologies</p>
+		<select size="10">
+			<optgroup label="Tech Skills">
+			<option value="HTML">HTML</option>
+			<option value="CSS">CSS</option>
+			<option value="JavaScript">JavaScript</option>
+			<option value="git">git</option>
+			</optgroup>
+			<optgroup label="Soft Skills">
+			<option value="Time management">Time management</option>
+			<option value="Proactivity">Proactivity</option>
+			<option value="Teamwork">Teamwork</option>
+			<option value="Leadership">Leadership</option>
+			</optgroup>
+		</select>
+		<p>Photo</p>
+		<input type="file" value="Choose file" id="photo"><br>
+		<label for="comments">Comments</label><br>
+		<textarea rows="5"></textarea><br>
+		<input type="submit" value="Save">
+		</form>
+
+	</body>
+</html>
