@@ -1,0 +1,76 @@
+
+/*task1*/
+body{
+	width: 45%;
+	padding: 0;
+	font-size: 100%
+}
+h1{
+	color: orange;
+	font-size: 140%;
+	text-align: right;
+}
+em{
+	color: #fff;
+	background-color: green; 
+}
+p:first-letter{
+color: red;
+font-size: 150%;
+font-weight: bold;
+}
+
+#allotment.plants-list h2{
+	color: orange;
+}
+.plants-list h2:last-of-type{
+	color: blue;
+}
+.plants-list ul li{
+	font-weight: bold;
+}
+.plants-list ol li{
+	font-weight: normal;
+}
+#allotment .fruits-list li{
+color: #ccc;
+}
+#allotment .vegetables-list li{
+	color: red;
+}
+#warehouse .fruits-list li{
+color: green;
+}
+#warehouse .vegetables-list li{
+	color: red;
+}
+tbody tr td:first-of-type{
+	color: orange;
+	background-color: #fff;
+}
+tbody tr td{
+	color: #fff;
+	background-color: green;
+	text-align: center;
+}
+/*task2*/
+article p:first-of-type{
+	font-size: larger;
+}
+article p:last-of-type{
+	color: #999;
+}
+/*task4*/
+a[href^="http"] {
+	color: #f70;
+}
+a[href*="google"] {
+	color: #666;
+}
+a[target="_blank"]:after{
+content: "\21f1";
+display: inline-block;
+transform: rotate(90deg);
+font-family: Cambria;  
+margin-left: 5px;
+}
