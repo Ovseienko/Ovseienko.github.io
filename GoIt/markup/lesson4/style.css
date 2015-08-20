@@ -31,10 +31,12 @@ text-decoration: none;
 text-transform: uppercase;
 font-size: 18px;
 }
-.active{
+.active,
+li:hover{
 	background: #eeeeee;
 }
-.active a{
+.active a, 
+a:hover{
 color: #a0a0a2;
 padding: 8px 12px;
 }
