@@ -23,7 +23,6 @@ font-family: Impact, Helvetica sans-serif;
 width: 900px;
 list-style: none;
 margin: 0 auto;
-padding: 0 35px;
 }
 .menu li{
 display: inline-block;
@@ -34,13 +33,10 @@ margin-right: 23px;
 color: #fff;
 font-size: 18px;
 }
-.menu .active,
-.menu  li:hover{
+.menu .active a,
+.menu  li:hover a{
 	background: #eeeeee;
-}
-.menu .active a, 
-.menu a:hover{
-color: #a0a0a2;
+	color: #a0a0a2;
 padding: 8px 12px;
 }
 .more {
