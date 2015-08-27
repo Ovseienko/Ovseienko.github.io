@@ -39,7 +39,8 @@ text-transform: uppercase;
 display: none;
 position: absolute;
 left: 0;
-padding-left: 240px;
+padding:0;
+text-align: center;
 width: 100%;
 background: #eeeeee;
 }
@@ -147,7 +148,9 @@ width: 251px;
     border: none;
     border-bottom: 2px solid #b3560b;
     cursor: pointer;
+    outline: none;
 }
 input:hover{
-	border-bottom: 2px solid #ee8129;;
+	border-bottom: 2px solid #f68f45;
+    background: #f68f45;
 }

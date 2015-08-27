@@ -27,19 +27,20 @@ height: 38px;
 }
 .menu li{
 display: inline-block;
-padding: 8px 0;
 margin-right: 23px;
 float: left;
 }
 .menu a{
+display: inline-block;
 color: #fff;
 font-size: 18px;
+padding: 8px 12px;
 }
 .menu .active a,
 .menu  li:hover a{
-	background: #eeeeee;
-	color: #a0a0a2;
-padding: 8px 12px;
+background: #eeeeee;
+color: #a0a0a2;
+
 }
 li.more {
 float: right;
