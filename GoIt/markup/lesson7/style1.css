@@ -1,0 +1,80 @@
+.table{
+width: 700px;
+margin: 50px 400px;
+}
+.table p{
+    text-shadow: 0px 0px 5px #555555;
+    text-transform: uppercase;
+    font-family: Arial;
+    text-align: left;
+    color:rgba(85,85,85,0.3);
+}
+.table .p-1{
+font-size: 105px;
+    letter-spacing: 93px;
+    margin-bottom: -39px;
+}
+.table .p-2{
+font-size: 89px;
+    letter-spacing: 33px;
+    margin-bottom: -28px;
+
+}
+.table .p-3{
+font-size: 80px;
+    letter-spacing: 7px;
+    margin-bottom: -18px;
+}
+.table .p-4{
+font-size: 67px;
+    letter-spacing: 7px;
+    margin-bottom: -4px;
+}
+.table .p-5{
+    font-size: 55px;
+    letter-spacing: 13px;
+    margin-bottom: -3px;
+}
+.table .p-6{
+font-size: 51px;
+    letter-spacing: 8px;
+    margin-bottom: -5px;
+}
+.table .p-7{
+font-size: 43px;
+    letter-spacing: 13px;
+    margin-bottom: 0px;
+}
+.table .p-8{
+font-size: 34px;
+    margin-top: 36px;
+    letter-spacing: 12px;
+}
+.table .p-9{
+    font-size: 20px;
+    letter-spacing: 20px;
+    margin-bottom: 31px;
+ 
+}
+.table .p-10{
+	font-size: 14px;
+    letter-spacing: 19px;
+}
+.table .p-11{
+	font-size: 9px;
+    margin-top: 21px;
+    letter-spacing: 22px;
+
+}
+.table .p-12{
+    font-size: 7px;
+    margin-top: 31px;
+    letter-spacing: 23px;
+    color: transparent;
+}
+.table .line{
+width: 381px;
+    height: 1px;
+    margin-top: 16px;
+    background-color: #ffcccc;
+}
