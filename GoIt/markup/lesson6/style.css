@@ -12,7 +12,6 @@ ul{
 }
 :focus, :active{
 	outline: none;
-	borde r:none;
 }
 h1{
 font-size: 30px;
@@ -162,6 +161,7 @@ input:hover{
 }
 input:active{
     border-bottom: 2px solid #ee8129;
+     background: #ee8129;
 }
 .container:first-of-type input,
 .container:last-of-type input{
@@ -176,6 +176,7 @@ input:active{
 .container:first-of-type input:active,
 .container:last-of-type input:active{
     border-bottom: 2px solid #4684b9;
+     background: #3371a6;
 }
 /*task2 style*/
 .task2{

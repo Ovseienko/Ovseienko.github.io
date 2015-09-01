@@ -121,12 +121,11 @@ background: url(images/line.png) center bottom no-repeat;
 }
 .circle{
     overflow: hidden;
-    float: left;
+    display: inline-block;
     width: 335px;
     text-align: center;
 }
 .circle:last-of-type {
-    float: right;
     width: 333px;
     margin-right: 39px;
 }
@@ -135,22 +134,23 @@ background: url(images/line.png) center bottom no-repeat;
     display: inline-block;
     color: #3070a8;
     text-transform: uppercase;
-    padding: 20px 0 0 28px;
+   padding-top: 16px;
     font-family: 'Futura bk';
     font-size: 30px;
 }
 .circle img {
     display: inline-block;
-    margin: 22px 0 0 63px;
+   /* margin: 22px 0 0 63px;*/
 }
 .circle p{
+    text-align: center;
 	color: #999999;
 	font-size: 14px;
 	line-height: 1.8;
 	font-family: 'Open Sans', sans-serif;
 }
 .circle:last-of-type p {
-    padding-left: 32px;
+   /* padding-left: 32px; */
 }
 /*middle-section*/
 .middle-section{
@@ -207,7 +207,7 @@ background: url(images/line.png) center bottom no-repeat;
 }
 h1{
 font-size: 30px;
-    margin-bottom: 47px;
+    margin-bottom: 72px;
     text-transform: uppercase;
     letter-spacing: -0.5px;
     color: #41525c;

@@ -157,5 +157,6 @@ input:hover{
     background: #f68f45;
 }
 input:active{
+    background: #ee8129;
     border-bottom: 2px solid #f68f45;
 }
