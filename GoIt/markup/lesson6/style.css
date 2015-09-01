@@ -221,8 +221,7 @@ float: right;
     border-bottom: 11px solid transparent;
 }
 .text{
-overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     font-size: 14px;
     vertical-align: top;
     display: inline-block;
