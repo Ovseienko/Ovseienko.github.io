@@ -12,7 +12,7 @@ ul{
 }
 :focus, :active{
 	outline: none;
-	border:none;
+	borde r:none;
 }
 h1{
 font-size: 30px;
@@ -158,8 +158,10 @@ input{
     outline: none;
 }
 input:hover{
-	border-bottom: 2px solid #f68f45;
     background: #f68f45;
+}
+input:active{
+    border-bottom: 2px solid #ee8129;
 }
 .container:first-of-type input,
 .container:last-of-type input{
@@ -169,12 +171,15 @@ input:hover{
 }
 .container:first-of-type input:hover,
 .container:last-of-type input:hover{
-	border-bottom: 2px solid #4684b9;
     background: #4684b9;
+}
+.container:first-of-type input:active,
+.container:last-of-type input:active{
+    border-bottom: 2px solid #4684b9;
 }
 /*task2 style*/
 .task2{
-	background: url(images/bg-1.jpg) 0 0 repeat-y;
+	background: url(images/bg-1.jpg) 0 0 repeat;
 }
 h1.title {
     margin: 50px 0 42px 0;
@@ -190,9 +195,9 @@ h1.title i {
 }
 .testimonials {
     margin: 0 auto;
-    padding-left: 37px;
+    /*padding-left: 37px;*/
     height: 300px;
-    width: 1026px;
+    width: 76%;
 }
 .comment-box {
     overflow-x: hidden;

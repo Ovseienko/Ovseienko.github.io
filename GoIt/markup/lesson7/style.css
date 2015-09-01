@@ -195,7 +195,7 @@ background: url(images/line.png) center bottom no-repeat;
 }
 .middle-section ul li:nth-of-type(2) {
     background: url(images/point-blue.png) 14px 10px no-repeat;
-    margin: 16px 0 -7px 0;
+    margin: 16px 0 14px 0;
     padding-left: 34px;
     color: #3070a8;
 }
@@ -203,6 +203,7 @@ background: url(images/line.png) center bottom no-repeat;
 /*prices-block*/
 .prices{
 	text-align: center;
+    margin-bottom: 73px;
 }
 h1{
 font-size: 30px;
@@ -267,7 +268,7 @@ font-size: 30px;
 }
 .container:first-of-type .white,
 .container:last-of-type .white{
-	width: 295px;
+	width: 292px;
     border: 1px solid #e8eaec;
     margin: 0;
     border-top: none;
@@ -342,8 +343,10 @@ input{
     outline: none;
 }
 input:hover{
-	border-bottom: 2px solid #f68f45;
     background: #f68f45;
+}
+input:active{
+    border-bottom: 2px solid #ee8129;
 }
 .container:first-of-type input,
 .container:last-of-type input{
@@ -353,32 +356,36 @@ input:hover{
 }
 .container:first-of-type input:hover,
 .container:last-of-type input:hover{
-	border-bottom: 2px solid #4684b9;
     background: #4684b9;
+}
+.container:first-of-type input:active,
+.container:last-of-type input:active{
+    border-bottom: 2px solid #4684b9;
 }
 /*testimonials style*/
 .testimonials-block{
+    padding: 50px 0;
 	width: 100%;
-	background: url(images/bg-1.jpg) 0 0 repeat-y;
+	background: url(images/bg-1.jpg) 0 0 repeat;
 }
 h1.title {
-    margin: 50px 0 42px 0;
     font-size: 40px;
-    font-weight: normal;
+    margin: 0 0 41px 0;
     color: #3170a8;
 }
 h1.title i {
     margin-right: 12px;
     font-style: normal;
+    font-weight: normal;
     color: #ee8129;
     text-align: left;
 }
-.testimonials {
+/*.testimonials {
     margin: 0 auto;
     padding-left: 37px;
     height: 300px;
-    width: 1026px;
-}
+    width: 76%;
+}*/
 .comment-box {
     overflow-x: hidden;
     text-align: left;

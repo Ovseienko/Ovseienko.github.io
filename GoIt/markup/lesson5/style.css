@@ -8,6 +8,7 @@ body{
 }
 ul{
 list-style: none;
+padding: 0;
 }
 ul li{
 	display: inline-block;
@@ -26,7 +27,7 @@ text-decoration: none;
 font-family: Impact, Helvetica sans-serif;
 width: 900px;
 margin: 0 auto;
-padding-left: 0;
+position: relative;
 }
 .menu a{
 padding: 8px 12px;
@@ -34,14 +35,15 @@ color: #fff;
 font-size: 18px;
 color: #fff;
 text-transform: uppercase;
+position: relative;
 }
+
 .menu li ul{
 display: none;
 position: absolute;
 left: 0;
-padding:0;
-text-align: center;
-width: 100%;
+text-align: left;
+width: 900px;
 background: #eeeeee;
 }
 .menu ul li {
@@ -50,9 +52,9 @@ background: #eeeeee;
 .menu li ul a{
 color: #888888;
 text-transform: capitalize;
-padding: 11px 0px;
+padding: 11px 0px 11px 12px;
 font-family: 'Times Roman' sans-serif;
-    font-size: 14px;
+font-size: 14px;
 }
 .menu li:hover a{
 	background: #eeeeee;
@@ -151,6 +153,8 @@ width: 251px;
     outline: none;
 }
 input:hover{
-	border-bottom: 2px solid #f68f45;
     background: #f68f45;
+}
+input:active{
+    border-bottom: 2px solid #f68f45;
 }
