@@ -125,6 +125,11 @@ background: url(images/line.png) center bottom no-repeat;
     color: #355770;
     border: 1px solid transparent;
 }
+.banner button:focus{
+border: 1px solid transparent;
+color: #ffffff;
+background-color: rgba(255,255,255,.4);
+}
 /*block with blue circles*/
 .services.wrapper {
     padding: 41px 0 34px;
@@ -204,7 +209,8 @@ background: url(images/line.png) center bottom no-repeat;
     line-height: 2.1;
     color: #9d9d9d;
 }
-.middle-section ul li:hover{
+.middle-section ul li:hover,
+.middle-section ul li:focus{
     color: #3070a8;
      background: url(images/point-blue.png) 14px 10px no-repeat;
 }

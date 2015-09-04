@@ -17,6 +17,9 @@ ul li a{
 display: inline-block;
 text-decoration: none;
 }
+:focus, :active, :hover{
+    outline: none;
+}
 .blue{
 	margin-top: 10px;
 	width: 100%;
