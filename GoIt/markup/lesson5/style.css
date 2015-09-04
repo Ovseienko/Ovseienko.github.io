@@ -41,14 +41,14 @@ position: relative;
 display: none;
 position: absolute;
 left: 0;
-text-align: left;
+text-align: center;
 width: 100%;
-padding-left:232px;
 background: #eeeeee;
 box-shadow: 0 2px 2px 1px #e2e2e2;
 }
 .menu ul li {
     margin-right: 16px;
+    padding-right: 5px;
 }
 .menu li ul a{
 color: #888888;
