@@ -346,7 +346,7 @@ font-size: 30px;
     font-size: 15px;
 }
 .container ul li:nth-of-type(even){
-    background: #f5f5f6 url('1.png') 32px 9px no-repeat;
+    background: #f5f5f6 url('images/1.png') 32px 9px no-repeat;
 }
 input{
     width: 251px;
@@ -392,7 +392,8 @@ input:active{
 .testimonials-block{
     padding: 50px 0;
 	width: 100%;
-	background: url(images/bg-1.jpg) 0 0 repeat;
+	background: url(images/bg-1.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
 }
 h1.title {
     font-size: 40px;
@@ -483,9 +484,10 @@ footer{
     position: relative;
 }
 .iconic-graphics{
-    float: left;
+  margin-left: calc((100% - 1023px)/2);
 }
 .iconic-graphics ul{
+    margin-top: 15px;
    margin-bottom: 23px;
    padding: 0;
     color: #666666;
@@ -511,14 +513,24 @@ padding-top: 5px;
  top: 0;
  right: 0;
  width: 51%;
- height: 346px;
+ height: calc(100% - 105px);
 }
+
 .social a{
     display: inline-block;
     width: 56px;
-    height: 85px;
+    height: 56px;
+    margin-bottom: 43px;
     margin-right: 7px;
 background: url(images/social.png) -67px 0 no-repeat;
+transition:all .7s ease;
+}
+.social a:hover{
+    transform: scale(1.2);
+    opacity: .7;
+}
+.social a:focus{
+opacity: .2;
 }
 .social a:first-of-type{
 background: url(images/social.png) 0 0 no-repeat;
@@ -530,12 +542,21 @@ background: url(images/social.png) 0 0 no-repeat;
     width: 100%;
     background-color: #3070a8;
     color: #ffffff;
-    padding-top: 10px;
     text-align: center;
-    padding-bottom: 15px;
+    height:105px;
+    overflow: hidden;
+}
+.bottom-blue p:first-of-type {
+    margin-top: 25px;
 }
 .bottom-blue p>a{
     display: inline-block;
     margin-left: 5px;
     color: #000;
+}
+.bottom-blue p>a:hover{
+   border-bottom: 1px dotted;
+}
+.bottom-blue p>a:focus{
+     color: rgba(0,0,0,.6);
 }
