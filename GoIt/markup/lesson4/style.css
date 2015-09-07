@@ -37,7 +37,7 @@ color: #fff;
 font-size: 18px;
 padding: 8px 12px;
 }
-.menu .active a,
+
 .menu  li:hover a{
 background: #eeeeee;
 color: #a0a0a2;

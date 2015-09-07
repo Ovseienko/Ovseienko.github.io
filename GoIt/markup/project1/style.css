@@ -215,12 +215,12 @@ background-color: rgba(255,255,255,.4);
     color: #3070a8;
      background: url(images/point-blue.png) 14px 10px no-repeat;
 }
-.middle-section ul li:nth-of-type(2) {
+/*.middle-section ul li:nth-of-type(2) {
     background: url(images/point-blue.png) 14px 10px no-repeat;
     margin: 16px 0 14px 0;
     padding-left: 34px;
     color: #3070a8;
-}
+}*/
 
 /*prices-block*/
 .prices{
