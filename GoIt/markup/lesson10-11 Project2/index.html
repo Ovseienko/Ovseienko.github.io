@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project2</title>
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div class="overlay-mask"></div>
+<h2>Showcase your work like a pro.</h2>
+<p>Contact me if you like my work</p>
+<div class="gallery">
+<img src="images/preview.jpg" alt="" class="preview">
+<button class="close-button"></button>
+	<div class="gallery-item"><img src="images/1.jpg" alt="">
+	<div class="mask">
+		<div class="mask-links"><a href="#" class="zoom"></a><a href="#" class="link"></a></div>
+	</div></div>
+	<div class="gallery-item"><img src="images/2.jpg" alt="">
+	<div class="mask">
+		<div class="mask-links"><a href="#" class="zoom"></a><a href="#" class="link"></a></div>
+	</div></div>
+	<div class="gallery-item"><img src="images/3.jpg" alt="">
+	<div class="mask">
+		<div class="mask-links"><a href="#" class="zoom"></a><a href="#" class="link"></a></div>
+	</div></div>
+	<div class="gallery-item"><img src="images/4.jpg" alt="">
+	<div class="mask">
+		<div class="mask-links"><a href="#" class="zoom"></a><a href="#" class="link"></a></div>
+	</div></div>
+	<div class="gallery-item"><img src="images/5.jpg" alt="">
+	<div class="mask">
+		<div class="mask-links"><a href="#" class="zoom"></a><a href="#" class="link"></a></div>
+	</div></div>
+	<div class="gallery-item"><img src="images/6.jpg" alt="">
+	<div class="mask">
+		<div class="mask-links"><a href="#" class="zoom"></a><a href="#" class="link"></a></div>
+	</div></div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.zoom').click(function(){
+			$('.overlay-mask, .preview, .close-button').show();
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.close-button').click(function(){
+			$('.overlay-mask, .preview, .close-button').hide();
+		});
+	});
+</script>
+</body>
+</html>
