@@ -456,9 +456,10 @@ font-weight: normal;
 	border: 1px solid #efb64a;
 	border-radius: 3px;
 	-webkit-box-shadow: 0 1px 1px 1px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 1px 1px rgba(0,0,0,.1);
 	box-shadow: 0 1px 1px 1px rgba(0,0,0,.1);
 	background: -webkit-linear-gradient(top, #ffc350, #ffb841); 
-	background: -webkit-linear-gradient(top, #ffc350, #ffb841);
+	background: -moz-linear-gradient(top, #ffc350, #ffb841);
 	background: -o-linear-gradient(top, #ffc350, #ffb841);
 	background: linear-gradient(top, #ffc350, #ffb841); 
 }
