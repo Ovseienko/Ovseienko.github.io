@@ -769,8 +769,14 @@ ul.tabs li {
     font-family: Arial, sans-serif;
     letter-spacing: -.2px;
     color: #999999;
-    text-shadow: 0 0 1px rgba(153,153,153.2);
+    text-shadow: 0 0 1px rgba(153,153,153,.2);
     cursor: default;
+}
+ul.tabs li:hover{
+	cursor: pointer;
+	color: #000;
+	text-shadow: 0 0 1px rgba(0,0,0,.5);
+	background: #ffffff;
 }
 .active-tab{
 	padding: 13px 11px 0px 11px !important;
