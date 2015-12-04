@@ -1,0 +1,1 @@
+elem.scrollDown = elem.scrollHeight - elem.scrollTop - elem.clientTop - elem.clientHeight;

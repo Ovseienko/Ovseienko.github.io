@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<script>
+  function showNotification(options) {
+ var notification = document.createElement('div');
+ notification.className = 'notification';
+  if(options.cssText) notification.style.cssText = options.cssText;
+  if(options.className) notification.classList.add(options.className);
+  
+  notification.innerHTML = options.html;
+  
+setInterval(function(){
+  
+  document.body.removeChild(notification);
+  
+},2000);
+
+setInterval(function(){
+  
+  document.body.appendChild(notification);
+  
+},1500);
+  
+}
+showNotification({
+  top: 10,
+  right: 10,
+  html: "Привет",
+  className: "welcome"
+});
+</script>
+</body>
+</html>
