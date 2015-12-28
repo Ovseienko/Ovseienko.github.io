@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ovseienko Exam</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<script type="text/javascript" src="js/animate.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+	<div class="top">
+	<span>Your score:</span>
+	<span class="score"></span><span>00</span><span class="dollar">$</span>
+	</div>
+	<div class="game-screen">
+		<div id="gunman" class="gunman gunman-animation" onclick="return false"></div>
+		<div id="fallingGunman" class="gunman falling" onclick="return false"></div>
+		<div class="hat"></div>
+		<div class="fire">
+			<p>fire!!!</p>
+		</div>
+		<div class="youWon">
+		<p>You won! You shot the bastard!</p>
+		<button class="again" onclick="playAgain()">Wanna try again?</button>
+		<button class="exit" onclick="hideMessage()">No. That's enough</button>
+		</div>
+		<div class="youLost">
+			<p>You lost!</p>
+			<button class="again" onclick="playAgain()">Wanna try again?</button>
+		<button class="exit" onclick="hideMessage()">No. That's enough</button>
+		</div>
+		<div class="total">
+			<span>Your total score is:</span><span class="totalScore"></span><span>00</span><span class="dollar">$</span>
+			<button class="close" onclick="hideTotal()"></button>
+	</div>
+		</div>
+	</div>
+	<div class="bottom">
+	</div>
+	</div>
+
+<!-- audio files -->
+<audio id="intro" src="sfx/intro.m4a" type="audio/mpeg" autoplay></audio>
+<audio id="fire" src="sfx/fire.m4a" type="audio/mpeg"></audio>
+<audio id="shot" src="sfx/shot.m4a" type="audio/mpeg"></audio>
+<audio id="win" src="sfx/win.m4a" type="audio/mpeg"></audio>
+<audio id="death" src="sfx/death.m4a" type="audio/mpeg"></audio>
+<audio id="wait" src="sfx/wait.m4a" type="audio/mpeg"></audio>
+
+<!-- 	javascript  -->
+
+<script type="text/javascript">
+
+//variables 
+
+var gunman = document.getElementById('gunman');
+var score = document.body.getElementsByClassName('score')[0];
+var youWon = document.body.getElementsByClassName('youWon')[0];
+var fire = document.body.getElementsByClassName('fire')[0];
+var fireStyle = getComputedStyle(fire);
+var checkIfClicked = true;
+var youLost = document.body.getElementsByClassName('youLost')[0];
+var fallingGunman = document.getElementById('fallingGunman');
+var hat = document.body.getElementsByClassName('hat')[0];
+var total = document.body.getElementsByClassName('total')[0];
+
+//when the gunman comes to the center
+
+gunman.addEventListener("animationend",function(){
+	var style = getComputedStyle(gunman);
+	var string = style.background.toString();
+
+	if(string.indexOf('-823px')>0){
+		gunman.classList.remove('gunman-animation');
+		gunman.classList.add('talking');
+		document.getElementById('intro').pause();
+		fire.style.display="block";
+		document.getElementById('fire').play();
+
+	if(fireStyle.display == "block"){
+
+		gunman.onclick = shoot;
+
+		setTimeout(function(){
+			if(checkIfClicked){ <!--//if is not clicked-->
+			document.getElementById('death').play();
+			fire.style.display="none";
+			score.innerHTML--;
+			youLost.style.display = 'block';
+		}else{ //is clicked
+			document.getElementById('win').play();
+			score.innerHTML++ ;
+			fire.style.display="none";
+			hat.style.display = 'block';
+			setTimeout(function(){
+				youWon.style.display = 'block';
+			},1500)
+		}
+		document.getElementsByClassName('totalScore')[0].innerHTML = score.innerHTML;
+		},1000); <!--//end timeout-->
+	}
+
+	}
+}); <!--//end of addEventListener-->
+
+function shoot(){
+	document.getElementById('shot').play();
+	checkIfClicked = false;
+	gunman.remove();
+	fallingGunman.style.display = 'block';
+	fire.style.display="none";
+}
+
+function hideMessage(){
+	hat.style.display = "none";
+	youWon.style.display = 'none';
+	youLost.style.display = 'none';
+	fallingGunman.classList.remove('falling');
+	document.getElementById('fallingGunman').style.opacity = "0.5";
+	gunman.style.opacity = '0.5';
+	document.getElementById('death').pause();
+	document.getElementById('win').pause();
+	total.style.display = 'block';
+}
+
+function playAgain(){
+	checkIfClicked = true;
+	youWon.style.display = 'none';
+	youLost.style.display = 'none';
+	hat.style.display = "none";
+	fallingGunman.style.display = 'none';
+	fallingGunman.classList.add('falling');
+	gunman.classList.remove('talking');
+	document.body.getElementsByClassName('game-screen')[0].appendChild(gunman);
+	gunman.classList.add('gunman-animation');
+	document.getElementById('death').pause();
+	document.getElementById('win').pause();
+	document.getElementById('intro').play();
+}
+function hideTotal(){
+	total.style.display = "none";
+	gunman.style.display = "none";
+	fallingGunman.style.display = "block";
+}
+</script>
+
+</body>
+</html>
