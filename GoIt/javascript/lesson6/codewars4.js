@@ -1,6 +1,0 @@
-function sum(array) {
-var total = array.reduce(function(a, b) {
-  return a + b;
-});
-  return total;
-}

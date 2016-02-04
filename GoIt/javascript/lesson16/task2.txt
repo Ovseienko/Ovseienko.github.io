@@ -1,7 +1,0 @@
-1 - document.getElementById('age-table').getElementsByTagName('label')
-2 - document.getElementById('age-table').rows[0].cells[0]
-3 - document.getElementsByTagName('form')[1]
-4 - document.getElementsByName('search')
-5 - document.querySelector('input[name="search"]')
-6 - document.querySelector('input[name="info[0]"]')
-7 - document.querySelector('form[name="search-person"] input[name="info[0]"]')
