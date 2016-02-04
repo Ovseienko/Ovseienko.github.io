@@ -415,9 +415,6 @@ p.name {
 	text-align: center;
 	color: #646464;
 }
-.container.narrow{
-	width: 1212px;
-}
  .container .prices-block{
 	width: 263px;
 	margin: auto;
