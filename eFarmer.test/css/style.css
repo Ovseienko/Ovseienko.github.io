@@ -67,7 +67,7 @@ nav>a:active:before{
 #banner{
 	background: url(../images/cabinfarmer1.jpg) 0 0 no-repeat;
 	background-size: 100% 100%;
-	height: 564px;
+	padding-bottom: 50px;
 }
 #banner .right-col{
 	position: relative;
@@ -116,8 +116,8 @@ nav>a:active:before{
 }
 .banner-text a{
 	display: inline-block;
-	padding: 10px 0px;
-    width: 240px;
+	padding: 10px 20px;
+    max-width: 240px;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 20px;
@@ -191,13 +191,20 @@ nav>a:active:before{
 	transition: all .3s ease-in-out;
 }
 #slider{
-	height: 600px;
+	/*height: 600px;*/
 	background: url(../images/slider-bg.jpg) 0 0 no-repeat;
 	background-size: 100% 100%;
 }
+#slider .container-fluid{
+	max-width: 1379px;
+}
 #slider-carousel,
 .slider-block{
-	height: 100%;
+	/*height: 100%;*/
+	padding: 0px 45px 160px 65px;
+}
+.slider-block{
+	padding: 0 25px 0 55px;
 }
 #slider-carousel .carousel-indicators{
 	width: 100%;
@@ -207,8 +214,8 @@ nav>a:active:before{
 	bottom: 15px;
 }
 #slider-carousel .item{
-	float: left;
-	width: 100%;
+/*	float: left;
+	width: 100%;*/
 }
 #slider-carousel .carousel-indicators li{
 	background: #444444;
@@ -225,12 +232,11 @@ nav>a:active:before{
 	margin-right: 30px;
 }
 .slider-right img{
-    width: 95%;
-    max-width: 600px;
-	margin-top: 90px;
+	width: 600px;
+	margin-top: 83px;
 }
 .slider-left {
-	padding-top: 165px;
+	padding-top: 155px;
 	padding-left: 55px;
 	text-align: left;
 }
@@ -267,7 +273,7 @@ nav>a:active:before{
 	text-transform: uppercase;
 	font-weight: 600;
 	color: #39863d;
-	margin-top:20px;
+	margin-top:15px;
 }
 #testimonials .comment-icon{
 	background: url(../images/prices-icons.png) 100% 0 no-repeat;
@@ -278,6 +284,7 @@ nav>a:active:before{
 }
 #testimonials-slider{
 	width: 100%;
+	float: right;
     background: #ffffff;
     max-width: 750px;
     border-radius: 10px;
@@ -339,13 +346,13 @@ p.name {
 }
 .features-div{
 /*	width: 41%;*/
-	max-width: 270px;
+	min-width: 270px;
 	background: #fff;
 	border-radius: 4px;
 	display: inline-block;
 	vertical-align: top;
 	border-bottom:4px solid #e5e6e6;
-	padding-top: 34px;
+/*	padding-top: 34px;*/
 	max-height: 280px;
 	margin-left:30px;
 }
@@ -367,24 +374,25 @@ p.name {
 	opacity: .7;
 	text-decoration: none;
 }
-.guidance,
-.antenna,
-.cloud,
-.minimum{
+.features-div>.guidance,
+.features-div>.antenna,
+.features-div>.cloud,
+.features-div>.minimum{
+	margin-top: 35px;
 	width: 64px;
 	height: 57px;
 	background: url(../images/prices-icons.png) 0 0 no-repeat;
 }
-.guidance{
+.features-div>.guidance{
 	width: 55px;
 }
-.antenna{
+.features-div>.antenna{
 	background-position: -50px 0; 
 }
-.cloud{
+.features-div>.cloud{
 	background-position: -127px 0;
 }
-.minimum{
+.features-div>.minimum{
     background-position: -196px 0;
 }
 .features-div h4{
@@ -396,7 +404,7 @@ p.name {
 }
 .features-div p{
 	color: #777777;
-    width: 84%;
+    width: 86%;
     max-width: 235px;
     text-align: center;
     margin: 20px auto 60px;
@@ -420,22 +428,16 @@ p.name {
 .container.narrow{
 	width: 1212px;
 }
-#prices .container>div{
-	max-width: 262px;
+ .container .prices-block{
+	width: 263px;
     margin-top: 15px;
-    margin-right: 40px;
     min-height: 457px;
-}
-#prices .container>div:last-of-type{
-	margin-right: 0;
-}
-.prices-block{
-	background: #419f46;
+    background: #419f46;
 	text-align: center;
 	color: #fff;
 	border-bottom: 5px solid #9dcc9f;
 }
-.prices-block.yellow{
+.yellow .prices-block{
 	background: #eca403;
 	border-bottom: 5px solid #f2ce7e;
 }
@@ -478,7 +480,7 @@ p.name {
     font-size: 18px;
     border-bottom: 1px solid #3c9341;
 }
-.prices-block.yellow ul li{
+.yellow .prices-block ul li{
 	border-bottom: 1px solid #d99703;
 }
 .prices-block .buy{
@@ -506,7 +508,7 @@ p.name {
 .prices-block .buy:active{
 	background: #d7e8d8;
 }
-.prices-block.yellow .buy:active{
+.yellow .prices-block .buy:active{
 	background: #f5d29d;
 }
 #prices {
@@ -634,6 +636,67 @@ footer .text-right .social-buttons>a:active{
 	background-position: 0 -42px;
 	margin-right: 0;
 }
+/*media queries*/
+@media (max-width: 922px){
+	#banner{
+		background-size: 100% 100%;
+	}
+	#banner .right-col img:first-of-type{
+		width: 300px;
+	}
+	#banner .right-col img:last-of-type{
+		width: 350px;
+	}
+	.banner-text{
+		margin-top: 150px;
+	}
+	.banner-text h1{
+		font-size: 33px;
+	}
+	.banner-description {
+    font-size: 14px;
+	}
+	.banner-text a{
+		width: 170px;
+	}
+	.slider-left{
+		padding-top: 60px;
+	}
+	.slider-right img {
+    	width: 600px;
+	}
+	#slider-carousel, .slider-block{
+		padding-bottom: 60px;
+	}
+	.testimonial-text{
+		width: 70%;
+		font-size: 16px;
+	}
+	#testimonials h3 {
+    width: 80%;
+	}
+	#features .container>div{
+		text-align: center;
+	}
+	.features-div{
+		margin-left: 0;
+		float: none;
+	}
+	.inline-block{
+		display:inline-block;
+		margin: auto;
+	}
+	#prices .container{
+		text-align: center;
+	}
+/*	#prices .container>div:last-of-type {
+    margin-right: 40px;
+	}*/
+	.prices-block.inline-block{
+		float: none;
+		vertical-align: top;
+	}
+}
 @media (max-width: 768px){
 	body{
 		padding-top: 50px;
@@ -654,6 +717,9 @@ footer .text-right .social-buttons>a:active{
 	nav.menu>a{
 		margin: 10px 5px 0 20px;
 	}
+	.right-col img:first-of-type {
+    	margin: 0px 0 0 100px;
+	}
 	.banner-text{
 		margin-top: 0px;
 		width: 85%;
@@ -670,11 +736,20 @@ footer .text-right .social-buttons>a:active{
 		width: 41%;
    		max-width: 240px;
 	}
+	.right-col img:last-of-type {
+   		margin: -183px 0 -40px -10px;
+	}
 	#slider{
 		height: auto;
 	}
+	#slider-carousel, .slider-block {
+    	padding-bottom: 35px;
+	}
+	.slider-right img {
+    width: 400px;
+	}
 	.slider-left{
-		padding-left: 0;
+		padding-left: 25px;
 		padding-top:0;
 	}
 	.slider-left h2{
@@ -688,6 +763,7 @@ footer .text-right .social-buttons>a:active{
 	}
 	#testimonials h3{
 		font-size: 22px;
+		width: 100%;
 	}
 	.testimonial-text {
     width: 90%;
@@ -710,9 +786,9 @@ footer .text-right .social-buttons>a:active{
 		display: inline-block;
 		vertical-align: top;
 	}
-	#prices .container>div:last-of-type {
+/*	#prices .container>div:last-of-type {
 	    margin-right: 40px;
-	}
+	}*/
 	#prices h5{
 		font-size: 15px;
 	}
@@ -727,28 +803,59 @@ footer .text-right .social-buttons>a:active{
 	}
 
 }
-/*@media (min-width: 768px) {
-  .container.wide {
-    width: 750px;
-  }
-  .testimonial-text {
-    width: 70%;
+@media (max-width: 480px){
+	nav.menu>a {
+    margin: 10px 5px 0 10px;
 	}
-	.banner-text a{
-		width: 41%;
-   		max-width: 240px;
+	#banner{
+		padding-bottom: 10px;
+	}
+	#banner .right-col img:first-of-type{
+		width: 200px;
+		margin: 7px 0 0 65px;
+	}
+	#banner .right-col img:last-of-type{
+		width: 225px;
+		margin: -135px 0 -50px 15px;
+	}
+	#slider-carousel .item .col-xs-6{
+		width: 100%;
+	}
+	.slider-right img {
+    	margin-top: 10px;
+	}
+	.slider-left h2 {
+    	font-size: 25px;
+	}
+	.slider-left p {
+		font-size: 14px;
+	   	margin-bottom: 20px;
+	}
+	#testimonials{
+		padding-top:20px;
+	}
+	#testimonials .testimonial-title{
+		width: 100%;
+	}
+	.testimonial-slider-body{
+		width: 100%;
+	}
+	.testimonial-text {
+	    width: 65%;
+	    display: inline-block;
+	    font-size: 14px;
+	}
+	#features .inline-block{
+		width: 100%;
+	}
+	footer .text-right{
+		text-align: left;
+	}
+	footer .col-xs-6{
+		width: 100%;
+	}
+	#prices h5 {
+    width: 90%;
+    margin: auto;
 	}
 }
-@media (min-width: 992px) {
-  .container.wide {
-    width: 970px;
-  }
-  .testimonial-text {
-    width: 78%;
-	}
-}*/
-/*@media (min-width: 1200px) {
-  .container.wide {
-    width: 1170px;
-  }
-}*/

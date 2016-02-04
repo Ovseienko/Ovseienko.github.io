@@ -31,8 +31,8 @@
 	<section id="banner" class="row">
 		<div class="container">
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 right-col">
-				<img src="images/AG-STAR1.png" alt="">
-				<img src="images/screen shadow.png" alt="">
+				<img src="images/AG-STAR1.png" class="img-responsive">
+				<img src="images/screen shadow.png" class="img-responsive">
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 				<div class="banner-text">
@@ -53,28 +53,26 @@
 	</section>
 <!-- Video section -->
 	<section id="video" class="row">
-		<img src="images/screenshot1.jpg" alt="">
-		<button type="btn" class="play">
-			<span class="glyphicon glyphicon-play"></span>
-		</button>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<iframe id="tractor-video" width="100%" height="600" src="https://www.youtube.com/embed/B-zbylzQm1s" frameborder="0" allowfullscreen></iframe>
+		</div>
 	</section>
 <!-- Slider section -->
-	<section id="slider">
-		<div class="container wide">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 slider-block">
-				<div id="slider-carousel" class="carousel slider" data-ride="carousel">
-				<!-- controls -->
+	<section id="slider" class="row">
+		<div class="container-fluid">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<!-- slider -->
+				<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 						<li data-target="#slider-carousel" data-slide-to="1"></li>
 						<li data-target="#slider-carousel" data-slide-to="2"></li>
 						<li data-target="#slider-carousel" data-slide-to="3"></li>
 					</ol>
-				<!-- inner slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-right">
-								<img src="images/device.png" alt="">
+								<img src="images/device.png" class="img-responsive">
 							</div>
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-left">
 								<h2>Field Guidance on your tablet.</h2>
@@ -83,7 +81,7 @@
 						</div>
 						<div class="item">
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-right">
-								<img src="images/device.png" alt="">
+								<img src="images/device.png" class="img-responsive">
 							</div>
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-left">
 								<h2>Field Guidance on your tablet.</h2>
@@ -92,7 +90,7 @@
 						</div>
 						<div class="item">
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-right">
-								<img src="images/device.png" alt="">
+								<img src="images/device.png" class="img-responsive">
 							</div>
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-left">
 								<h2>Field Guidance on your tablet.</h2>
@@ -101,7 +99,7 @@
 						</div>
 						<div class="item">
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-right">
-								<img src="images/device.png" alt="">
+								<img src="images/device.png" class="img-responsive">
 							</div>
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 slider-left">
 								<h2>Field Guidance on your tablet.</h2>
@@ -116,11 +114,11 @@
 <!-- Testimonials section -->
 	<section id="testimonials" class="row">
 		<div class="container">
-			<div class="col-xs-3 col-sm-4 col-md-4 col-lg-4">
+			<div class="col-xs-5 col-sm-4 col-md-4 col-lg-4 testimonial-title">
 				<h3>here is what our customers say</h3>
 				<div class="comment-icon"></div>
 			</div>
-			<div class="col-xs-7 col-sm-8 col-md-8 col-lg-8 right">
+			<div class="col-xs-7 col-sm-8 col-md-8 col-lg-8 right testimonial-slider-body">
 			<!-- testimonials-slider -->
 				<div id="testimonials-slider" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
@@ -130,26 +128,26 @@
 					</ol>
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-						<div class="img-block"><img src="images/testimonial-img.jpg" alt=""></div>
-						<div class="testimonial-text">
-							I am using eFarmer app since autumn 2014 and have started with eFarm Pilot a few month ago. It is great being able to have uo to date data on my works stored in one place. We also use the GPS antenna for spraying and fertilizing jobs.
-							<p class="name">vadasz janos (64 years), somogyvamos, hu</p>
-						</div>
-						</div>
-						<!-- <div class="item">
-						<div class="img-block"><img src="images/testimonial-img.jpg" alt=""></div>
+						<div class="img-block"><img src="images/testimonial-img.jpg" class="img-responsive"></div>
 						<div class="testimonial-text">
 							I am using eFarmer app since autumn 2014 and have started with eFarm Pilot a few month ago. It is great being able to have uo to date data on my works stored in one place. We also use the GPS antenna for spraying and fertilizing jobs.
 							<p class="name">vadasz janos (64 years), somogyvamos, hu</p>
 						</div>
 						</div>
 						<div class="item">
-						<div class="img-block"><img src="images/testimonial-img.jpg" alt=""></div>
+						<div class="img-block"><img src="images/testimonial-img.jpg"class="img-responsive"></div>
 						<div class="testimonial-text">
 							I am using eFarmer app since autumn 2014 and have started with eFarm Pilot a few month ago. It is great being able to have uo to date data on my works stored in one place. We also use the GPS antenna for spraying and fertilizing jobs.
 							<p class="name">vadasz janos (64 years), somogyvamos, hu</p>
 						</div>
-						</div> -->
+						</div>
+						<div class="item">
+						<div class="img-block"><img src="images/testimonial-img.jpg" class="img-responsive"></div>
+						<div class="testimonial-text">
+							I am using eFarmer app since autumn 2014 and have started with eFarm Pilot a few month ago. It is great being able to have uo to date data on my works stored in one place. We also use the GPS antenna for spraying and fertilizing jobs.
+							<p class="name">vadasz janos (64 years), somogyvamos, hu</p>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -157,30 +155,38 @@
 	</section>
 	<section id="features" class="row">
 		<div class="container">
-			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-				<div class="features-div right">
-					<div class="guidance centered"></div>
-					<h4>AB FIELD GUIDANCE</h4>
-					<p>Just set the start and end points of the first pass to get the optimal driving route. View your fields while working with eFarm Pilot.  </p>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 inline-block">
+					<div class="features-div right">
+						<div class="guidance centered"></div>
+						<h4>AB FIELD GUIDANCE</h4>
+						<p>Just set the start and end points of the first pass to get the optimal driving route. View your fields while working with eFarm Pilot.  </p>
+					</div>
 				</div>
-				<div class="features-div right">
-					<div class="antenna centered"></div>
-					<h4>HIGH ACCURACY</h4>
-					<p>Reduce the width of overlaps down to 30 cm with high positioning accuracy with our GPS antenna.</p>
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 inline-block">
+					<div class="features-div right">
+						<div class="antenna centered"></div>
+						<h4>HIGH ACCURACY</h4>
+						<p>Reduce the width of overlaps down to 30 cm with high positioning accuracy with our GPS antenna.</p>
+					</div>
 				</div>
 				<a href="#">Download Datasheet in PDF</a>
 			</div>
-			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-				<div class="features-div">
-					<div class="cloud centered"></div>
-					<h4>CLOUD STORAGE</h4>
-					<p>Save your field operations to cloud. Get access to history of works anywhere.</p>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 inline-block">
+					<div class="features-div">
+						<div class="cloud centered"></div>
+						<h4>CLOUD STORAGE</h4>
+						<p>Save your field operations to cloud. Get access to history of works anywhere.</p>
+					</div>
 				</div>
-				<div class="features-div">
-					<div class="minimum centered"></div>
-					<h4>MINIMUM COST</h4>
-					<p>You only buy an antenna and use your Android phone or tablet as the monitor. Also you can buy the license to use just the app itself.</p>
-				</div>	
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 inline-block">
+					<div class="features-div">
+						<div class="minimum centered"></div>
+						<h4>MINIMUM COST</h4>
+						<p>You only buy an antenna and use your Android phone or tablet as the monitor. Also you can buy the license to use just the app itself.</p>
+					</div>	
+				</div>
 				<a href="#">Download Quick Setup Guide</a>
 			</div>
 		</div>
@@ -189,53 +195,61 @@
 		<h1>get it now!</h1>
 		<h5>eFarm Pilot field guidance system is a product for every wallet. Choose yours:</h5>
 		<div class="container">
-			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 prices-block yellow">
-				<h5>Application trial</h5>
-				<div class="price">
-					free
-					<p>For those who want to try it with built-in GPS module on their device</p>
+			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 yellow inline-block">
+				<div class="prices-block">
+					<h5>Application trial</h5>
+					<div class="price">
+						free
+						<p>For those who want to try it with built-in GPS module on their device</p>
+					</div>
+					<ul>
+						<li>14 days of free trial</li>
+					</ul>
+					<button class="btn buy">Download</button>
 				</div>
-				<ul>
-					<li>14 days of free trial</li>
-				</ul>
-				<button class="btn buy">Download</button>
 			</div>
-			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 prices-block">
-				<h5>Application</h5>
-				<div class="price">
-					<span class="glyphicon glyphicon-euro"></span>99
-					<p>For those who have a good signal with built-in GPS module on the device</p>
-				</div>
-				<ul>
-					<li>Lifetime app license</li>
-				</ul>
-				<button class="btn buy">Buy now</button>
+			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 inline-block">
+				<div class="prices-block">
+					<h5>Application</h5>
+					<div class="price">
+						<span class="glyphicon glyphicon-euro"></span>99
+						<p>For those who have a good signal with built-in GPS module on the device</p>
+					</div>
+					<ul>
+						<li>Lifetime app license</li>
+					</ul>
+					<button class="btn buy">Buy now</button>
+				</div> 
 			</div>
-			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 prices-block">
-				<h5>Application + GPS antenna</h5>
-				<div class="price">
-					<span class="glyphicon glyphicon-euro"></span>997
-					<p>For those who want high precision and professional accuracy</p>
-				</div>
-				<ul>
-					<li>Lifetime app license</li>
-					<li>GPS antenna</li>
-					<li>All necessary accesories</li>
-				</ul>
-				<button class="btn buy">Buy now</button>
+			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 inline-block">
+				<div class="prices-block">
+					<h5>Application + GPS antenna</h5>
+					<div class="price">
+						<span class="glyphicon glyphicon-euro"></span>997
+						<p>For those who want high precision and professional accuracy</p>
+					</div>
+					<ul>
+						<li>Lifetime app license</li>
+						<li>GPS antenna</li>
+						<li>All necessary accesories</li>
+					</ul>
+					<button class="btn buy">Buy now</button>
+				</div> 
 			</div>
-			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 prices-block">
-				<h5>Full bundle</h5>
-				<div class="price">
-					<span class="glyphicon glyphicon-euro"></span>1499
-					<p>For those who love to have everything out of the box</p>
+			<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3 inline-block">
+				<div class="prices-block">
+					<h5>Full bundle</h5>
+					<div class="price">
+						<span class="glyphicon glyphicon-euro"></span>1499
+						<p>For those who love to have everything out of the box</p>
+					</div>
+					<ul>
+						<li>High performance tablet</li>
+						<li>GPS antenna</li>
+						<li>All necessary accesories</li>
+					</ul>
+					<button class="btn buy">Buy now</button>
 				</div>
-				<ul>
-					<li>High performance tablet</li>
-					<li>GPS antenna</li>
-					<li>All necessary accesories</li>
-				</ul>
-				<button class="btn buy">Buy now</button>
 			</div>
 		</div>
 	</section>
@@ -275,5 +289,10 @@
 	</div>
 </footer>
 </div>
+<script type="text/javascript">
+	$('.watch-video').click(function(){
+	    $("#tractor-video")[0].src += "?autoplay=1";
+	});
+</script>
 </body>
 </html>
