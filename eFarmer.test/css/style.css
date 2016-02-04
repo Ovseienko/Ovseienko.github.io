@@ -845,8 +845,13 @@ footer .text-right .social-buttons>a:active{
 	    display: inline-block;
 	    font-size: 14px;
 	}
-	#features .inline-block{
+	#features .inline-block,
+	#prices .inline-block{
 		width: 100%;
+	}
+	.prices-block{
+		display: block;
+	    margin: auto;
 	}
 	footer .text-right{
 		text-align: left;
@@ -858,4 +863,39 @@ footer .text-right .social-buttons>a:active{
     width: 90%;
     margin: auto;
 	}
+}
+@media (max-width: 320px){
+	nav.menu>a{
+		font-size: 12px;
+		margin-left: 5px;
+	}
+	#banner {
+    padding-bottom: 3px;
+	}
+	#banner .right-col img:first-of-type {
+    width: 150px;
+    margin: 7px 0 0 45px;
+	}
+	#banner .right-col img:last-of-type {
+	    width: 175px;
+	    margin: -99px 0 -60px 15px;
+	}
+	.banner-text h1 {
+	    font-size: 20px;
+	    margin-top: 60px;
+	    margin-bottom: 0px;
+	    line-height: 30px;
+	}
+	.banner-description {
+	    font-size: 12px;
+	}
+	.banner-text a {
+	    padding: 10px 10px;
+	    font-size: 14px;
+	    margin-top: 10px;
+	}
+	.testimonial-text{
+		width: 90%;
+	}
+
 }
