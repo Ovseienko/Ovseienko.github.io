@@ -50,7 +50,7 @@
      <li>
         <img ng-src="img/materials.png">
         <span class="detail-name"> Materials: </span>
-        <span class="detail-data" ng-repeat="task in taskData.operation.field.tasks"> {{ task.materials[i]}} </span>
+        <span class="detail-data" ng-repeat="task in taskData.operation.field.tasks"> {{ task.materials.join(', ')}} </span>
     </li>
     <li>
         <img ng-src="img/from.png">
