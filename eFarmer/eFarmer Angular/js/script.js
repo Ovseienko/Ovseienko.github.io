@@ -24,7 +24,7 @@ app.controller('DocsList', function($scope, $http) {
 			image:'img/map.png',
 			index: 4,
 			taskName: 'My task',
-			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/e653f518-af71-4e8a-84d0-c26208543e25'
+			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/7f10fce2-18cb-4e5d-a9b4-ff99a334bbd4'
 		}
 	];
 
