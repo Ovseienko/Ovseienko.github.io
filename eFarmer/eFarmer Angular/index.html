@@ -20,7 +20,8 @@
 					<li ng-repeat="task in tasks" ng-click="select($index)" ng-class="{active: $index===selectedIndex}">
 						<a href ng-click="getData(task.url)">
 						<img ng-src="{{task.image}}" class="img-responsive">
-						{{task.taskName}}</a>
+						{{task.taskName}}
+            </a>
 					</li>
 				</ul>
 			</div>
