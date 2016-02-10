@@ -30,17 +30,17 @@
 <script type="text/ng-template" id="mytemplate">
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 details center-block">
   <h4>{{taskData.name || 'Spraying: Insecticide input on some particular fields'}} </h4>
-  <span class="date"> {{taskData.startTime | date: "MM.dd.yyyy " || "21.05.2015"}} </span>
+  <span class="date"> {{(taskData.startTime | date: "MM.dd.yyyy ") || "21.05.2015"}} </span>
   <ul class="list-unstyled">
     <li>
         <img ng-src="img/field.png">
         <span class="detail-name">Field: </span>
-        <span class="detail-data"> {{taskData.operation.field.description || "Top field, Right field, Bottom field"}}</span>
+        <span class="detail-data"> {{taskData.operation.field.name || "Top field, Right field, Bottom field"}}</span>
     </li>
     <li>
         <img ng-src="img/operation.png">
         <span class="detail-name">Operation:</span>
-        <span class="detail-data"> {{taskData.operation.name || "Spraying"}} </span>
+        <span class="detail-data" > {{taskData.operation.name || "Spraying"}} </span>
     </li>
     <li>
         <img ng-src="img/vehicle.png">
@@ -50,7 +50,7 @@
      <li>
         <img ng-src="img/materials.png">
         <span class="detail-name"> Materials: </span>
-        <span class="detail-data" ng-repeat="task in taskData.operation.field.tasks"> {{task.materials || "Acamite, Evergreen, Pyrethrum..."}} </span>
+        <span class="detail-data" ng-repeat="task in taskData.operation.field.tasks"> {{ task.materials || "Acamite, Evergreen, Pyrethrum..."}} </span>
     </li>
     <li>
         <img ng-src="img/from.png">
@@ -59,7 +59,7 @@
     </li>
   </ul>
   <p>
-    <span class="detail-name">Note:</span>
+    <span class="detail-name-note">Note:</span>
     <span class="detail-data">{{taskData.description || "Please do the spraying on Top field today"}}</span>
   </p>
   <button class="add-task">Add task to eFarm Pilot</button>

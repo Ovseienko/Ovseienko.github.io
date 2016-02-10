@@ -31,24 +31,27 @@ app.controller('DocsList', function($scope, $http) {
 		return (index < 10) ? ("0" + index) : index;
 	}
 
-	$scope.selectedIndex = 0; /* first one set active by default */
 	$scope.select= function(i) {
 	  $scope.selectedIndex=i;
 	};
 
 	$scope.getData = function(u) {
 		$http.get(u).then(function(response) {
-			// console.log(response.data);
 			$scope.taskData = response.data;
-			console.log($scope.taskData);
 		}, function(response) {
 			console.log(response.status);
 		});
 	};
 
-	$scope.showMateials = function(arr){
-		return arr.join(', ');
-	}
+	// $scope.showMateials = function(arr){
+	// 	console.log('aa');
+	// 	if(arr.length === 0){
+	// 		return "Acamite, Evergreen, Pyrethrum..."
+	// 	}else{
+	// 		return arr.join(', ');
+	// 	}
+		
+	// }
 
 
 });
