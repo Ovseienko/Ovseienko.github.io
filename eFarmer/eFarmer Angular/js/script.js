@@ -45,6 +45,6 @@ app.directive('getDetails', function(){
 	
 	return {
 		restrict: 'E',
-		templateUrl: 'details.html'
+		templateUrl: './templates/details.html'
 	}
 });
