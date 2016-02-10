@@ -4,35 +4,27 @@ app.controller('DocsList', function($scope, $http) {
 	$scope.tasks = [
 		{
 			image:'img/map.png', 
-			index: 1,
-			taskName: 'My task', 
+			taskName: 'My task 01', 
 			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/d3ababca-4ad0-43c2-aef4-31f723d22b0b'
 		},
 		{
 			image:'img/map.png',
-			index: 2,
-			taskName: 'My task',
+			taskName: 'My task 02',
 			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/d74a42f4-dea7-4b08-a6ac-814738d6d9fc'
 		},
 		{
 			image:'img/map.png',
-			index: 3,
-			taskName: 'My task',
+			taskName: 'My task 03',
 			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/f0903ea1-a4ef-4709-a910-44d5206a864e'
 		},
 		{
 			image:'img/map.png',
-			index: 4,
-			taskName: 'My task',
+			taskName: 'My task 04',
 			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/7f10fce2-18cb-4e5d-a9b4-ff99a334bbd4'
 		}
 	];
 
-	$scope.showIndex = function(index) {
-		return (index < 10) ? ("0" + index) : index;
-	}
-
-	// $scope.selectedIndex = 0;
+	$scope.selectedIndex = 0;
 
 	$scope.select= function(i) {
 	  $scope.selectedIndex = i;
@@ -46,16 +38,7 @@ app.controller('DocsList', function($scope, $http) {
 		});
 	};
 
-	// $scope.showMateials = function(arr){
-	// 	console.log('aa');
-	// 	if(arr.length === 0){
-	// 		return "Acamite, Evergreen, Pyrethrum..."
-	// 	}else{
-	// 		return arr.join(', ');
-	// 	}
-		
-	// }
-
+	$scope.getData($scope.tasks[0].url);
 
 });
 
@@ -63,6 +46,6 @@ app.directive('getDetails', function(){
 	
 	return {
 		restrict: 'E',
-		templateUrl: 'mytemplate'
+		templateUrl: 'templates/details.html'
 	}
 });

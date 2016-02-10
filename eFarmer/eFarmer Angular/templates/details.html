@@ -1,0 +1,36 @@
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 details center-block">
+  <h4>{{taskData.name }} </h4>
+  <span class="date"> {{taskData.startTime | date: "MM.dd.yyyy "}} </span>
+  <ul class="list-unstyled">
+    <li>
+        <img ng-src="img/field.png">
+        <span class="detail-name">Field: </span>
+        <span class="detail-data"> {{taskData.operation.field.name}}</span>
+    </li>
+    <li>
+        <img ng-src="img/operation.png">
+        <span class="detail-name">Operation:</span>
+        <span class="detail-data" > {{taskData.operation.name }} </span>
+    </li>
+    <li>
+        <img ng-src="img/vehicle.png">
+        <span class="detail-name"> Vehicle: </span>
+        <span class="detail-data"> {{taskData.operation.vehicle.name || taskData.operation.vehicle.vehicleType.name}} </span>
+    </li>
+     <li>
+        <img ng-src="img/materials.png">
+        <span class="detail-name"> Materials: </span>
+        <span class="detail-data" ng-repeat="task in taskData.operation.field.tasks"> {{ task.materials.join(', ')}} </span>
+    </li>
+    <li>
+        <img ng-src="img/from.png">
+        <span class="detail-name">From: </span>
+        <span class="detail-data"> {{taskData.org.name}} </span>
+    </li>
+  </ul>
+  <p>
+    <span class="detail-name-note">Note:</span>
+    <span class="detail-data">{{taskData.description}}</span>
+  </p>
+  <button class="add-task">Add task to eFarm Pilot</button>
+</div>
