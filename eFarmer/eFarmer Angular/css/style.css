@@ -42,7 +42,7 @@ body{
 .tasks li:hover{
 	background: #f5f5f5;
 }
-li.active{
+.active{
 	background: #f5f5f5;
 }
 .tasks a>img{

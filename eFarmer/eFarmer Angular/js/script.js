@@ -27,12 +27,15 @@ app.controller('DocsList', function($scope, $http) {
 			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/e653f518-af71-4e8a-84d0-c26208543e25'
 		}
 	];
+
 	$scope.showIndex = function(index) {
 		return (index < 10) ? ("0" + index) : index;
 	}
 
+	// $scope.selectedIndex = 0;
+
 	$scope.select= function(i) {
-	  $scope.selectedIndex=i;
+	  $scope.selectedIndex = i;
 	};
 
 	$scope.getData = function(u) {
