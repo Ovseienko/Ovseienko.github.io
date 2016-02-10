@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app = 'EfarmApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>eFarmer app</title>
+	<link rel="shortcut icon" href="img/logo.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="container app-block" ng-controller="DocsList as doc">
+		<div class="row">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 tasks center-block">
+				<h4 class="tasks-title">{{title}}</h4>
+				<ul class="list-unstyled">
+					<li ng-repeat="task in tasks" ng-click="select($index)" ng-class="{active: $index===selectedIndex}">
+						<a href ng-click="getData(task.url)">
+						<img ng-src="{{task.image}}" class="img-responsive">
+						{{task.taskName}} {{showIndex(task.index)}}</a>
+					</li>
+				</ul>
+			</div>
+			<get-details></get-details>	
+		</div>
+	</div>
+<script type="text/ng-template" id="mytemplate">
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 details center-block">
+  <h4>{{taskData.name || 'Spraying: Insecticide input on some particular fields'}} </h4>
+  <span class="date"> {{taskData.startTime | date: "MM.dd.yyyy " || "21.05.2015"}} </span>
+  <ul class="list-unstyled">
+    <li>
+        <img ng-src="img/field.png">
+        <span class="detail-name">Field: </span>
+        <span class="detail-data"> {{taskData.operation.field.description || "Top field, Right field, Bottom field"}}</span>
+    </li>
+    <li>
+        <img ng-src="img/operation.png">
+        <span class="detail-name">Operation:</span>
+        <span class="detail-data"> {{taskData.operation.name || "Spraying"}} </span>
+    </li>
+    <li>
+        <img ng-src="img/vehicle.png">
+        <span class="detail-name"> Vehicle: </span>
+        <span class="detail-data"> {{taskData.operation.vehicle.vehicleType.name || "John Deere"}} </span>
+    </li>
+     <li>
+        <img ng-src="img/materials.png">
+        <span class="detail-name"> Materials: </span>
+        <span class="detail-data" ng-repeat="task in taskData.operation.field.tasks"> {{task.materials || "Acamite, Evergreen, Pyrethrum..."}} </span>
+    </li>
+    <li>
+        <img ng-src="img/from.png">
+        <span class="detail-name">From: </span>
+        <span class="detail-data"> {{taskData.org.name || "Andre Hornberg"}} </span>
+    </li>
+  </ul>
+  <p>
+    <span class="detail-name">Note:</span>
+    <span class="detail-data">{{taskData.description || "Please do the spraying on Top field today"}}</span>
+  </p>
+  <button class="add-task">Add task to eFarm Pilot</button>
+</div>
+</script>
+</body>
+</html>
+
