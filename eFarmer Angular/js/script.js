@@ -19,7 +19,22 @@ app.controller('DocsList', function($scope, $http) {
 		{
 			image:'img/map.png',
 			taskName: 'My task 04',
+			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/e653f518-af71-4e8a-84d0-c26208543e25'
+		},
+		{
+			image:'img/map.png',
+			taskName: 'My task 05',
+			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/8fe5d598-7ebc-47a7-ac8e-3eee86397c3d'
+		},
+		{
+			image:'img/map.png',
+			taskName: 'My task 06',
 			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/7f10fce2-18cb-4e5d-a9b4-ff99a334bbd4'
+		},
+		{
+			image:'img/map.png',
+			taskName: 'My task 07',
+			url:'http://dev.efarmer.mobi:8080/RESTService/RESTService/preview/document?uri=content://TRACK/810a37ea-d390-4539-b261-1106c2cc7579'
 		}
 	];
 
