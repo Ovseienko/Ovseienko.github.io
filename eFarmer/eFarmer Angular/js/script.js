@@ -1,6 +1,5 @@
 var app = angular.module('EfarmApp', []);
 app.controller('DocsList', function($scope, $http) {
-	$scope.title = "Your tasks";
 	$scope.tasks = [
 		{
 			image:'img/map.png', 
@@ -46,6 +45,6 @@ app.directive('getDetails', function(){
 	
 	return {
 		restrict: 'E',
-		templateUrl: 'templates/details.html'
+		templateUrl: 'details.html'
 	}
 });
