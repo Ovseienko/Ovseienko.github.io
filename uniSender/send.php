@@ -1,19 +1,20 @@
 <?
-// if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")){ 
         $to = 'ovseienko@gmail.com'; 
-        $subject = 'Обратный звонок'; 
+        $subject = 'Отчет'; 
         $message = '
                 <html>
                     <head>
                         <title>'.$subject.'</title>
                     </head>
                     <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p>                        
+                        <p>Kатегория: '.$_POST['cat'].'</p>
+                        <p>Суб-категория: '.$_POST['category'].'</p>
+                        <p>Тип: '.$_POST['type'].'</p>
+                        <p>Объект: '.$_POST['object'].'</p>
+                        <p>Оисание: '.$_POST['description'].'</p>                           
                     </body>
                 </html>'; 
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
-        $headers .= "From: Отправитель <from@example.com>\r\n"; 
         mail($to, $subject, $message, $headers); 
-// }
+        echo "Спасибо! Мы получили отчет!";
 ?>

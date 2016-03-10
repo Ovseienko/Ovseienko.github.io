@@ -7,6 +7,7 @@ body{
 }
 .wrapper{
 	min-width: 720px;
+	max-width: 900px;
 	float: none;
 }
 .wrapper h3{
@@ -50,8 +51,6 @@ textarea.form-control{
     background: -o-linear-gradient(top, #fefefe,#f1f1f1);
     background: -ms-linear-gradient(top, #fefefe,#f1f1f1);
     background: linear-gradient(top, #fefefe,#f1f1f1);
-    // -webkit-appearance: none; 
-    // -moz-appearance: none; 
 }
 .form-control:hover,
 .form-control:focus {
