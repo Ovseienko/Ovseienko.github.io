@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Новый отчет</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper col-xs-7 col-sm-7 col-md-7 col-lg-7 center-block">
+			<h3>Новый отчет</h3>
+			<form id="report-form">
+				<div class="form-group buttons">
+				<label>Категория</label>
+					<div class="btn-group btn-group-justified" role="group">
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default active default-active" value="">Подписчики</button>
+							<input hidden type="hidden" name="cat" class="hidden-input" value="Подписчики">
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default" value="">Письма</button>
+							<input hidden type="hidden" name="cat" class="hidden-input">
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default" value="">СМС</button>
+							<input hidden type="hidden" name="cat" class="hidden-input">
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default" value="">Отчеты</button>
+							<input hidden type="hidden" name="cat" class="hidden-input">
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default" value="">Деньги</button>
+							<input hidden type="hidden" name="cat" class="hidden-input">
+						</div>
+						<div class="btn-group" role="group">
+							<button type="button" class="btn btn-default" value="">Другое</button>
+							<input hidden type="hidden" name="cat" class="hidden-input">
+						</div>
+					</div>	
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 select-group">
+					<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label>Суб-категория</label>
+						<select class="form-control" name="category" id="category">
+							<option value="" selected></option>
+							<option>Не понятно как</option>
+							<option>Не понятно как1</option>
+							<option>Не понятно как2</option>
+							<option>Не понятно как3</option>
+						</select>
+					</div>	
+					<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label>Тип</label>
+						<select class="form-control" name="type" id="type">
+							<option value="" selected></option>
+							<option>Создание</option>
+							<option>Создание1</option>
+							<option>Создание2</option>
+							<option>Создание3</option>
+						</select>
+					</div>
+					<div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label>Объект</label>
+						<select class="form-control" name="object" id="name">
+							<option value="" selected></option>
+							<option>Экспорт</option>
+							<option>Экспорт1</option>
+							<option>Экспорт2</option>
+							<option>Экспорт3</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label>Описание</label>
+					<textarea class="form-control" class="description"></textarea>
+				</div>
+				<div class="form-group submit-group">
+					<span class="glyphicon glyphicon-repeat loading-icon"></span>
+					<input type="submit" class="btn btn-default send" value="Отправить" disabled></input>
+					<span class="tooltip-span">Отчет успешно отправлен!</span>
+				</div>
+			</form>
+		</div> <!-- end of wrapper -->
+	</div> <!-- end of contaienr -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
