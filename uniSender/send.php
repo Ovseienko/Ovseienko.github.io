@@ -15,6 +15,5 @@
                     </body>
                 </html>'; 
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; 
-        mail($to, $subject, $message, $headers); 
-        echo "Спасибо! Мы получили отчет!";
+        mail($to, $subject, $message, $headers);
 ?>
