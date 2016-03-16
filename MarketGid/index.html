@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet/less" type="text/css"n href="style.less">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+	<header>
+		<div class="container">
+			<a href="index.html" class="logo">layout</a>
+			<nav class="menu nav-justified">
+				<a href="#">html</a>
+				<a href="#">css</a>
+				<a href="#">javascript</a>
+			</nav>
+			<button class="btn">enter</button>
+		</div>
+		<div class="carousel slide" id="slider" data-ride="carousel" data-interval="4000">
+			<!-- slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="img/slider.jpg">
+					<div class="col-xs-10 col-sm-10 col-md-6 col-lg-4 slider-text">
+						<h1>Monetize <br> your skills now!</h1>
+						<button class="btn">GO!</button>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/slider.jpg">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 slider-text">
+						<h1>Monetize <br> your skills now!</h1>
+						<button class="btn">GO!</button>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/slider.jpg">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 slider-text">
+						<h1>Monetize <br> your skills now!</h1>
+						<button class="btn">GO!</button>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/slider.jpg">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 slider-text">
+						<h1>Monetize <br> your skills now!</h1>
+						<button class="btn">GO!</button>
+					</div>
+				</div>
+				<div class="item">
+					<img src="img/slider.jpg">
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 slider-text">
+						<h1>Monetize <br> your skills now!</h1>
+						<button class="btn">GO!</button>
+					</div>
+				</div>
+			</div>
+			<!-- indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#slider" data-slide-to="0" class="active"></li>
+				<li  data-target="#slider" data-slide-to="1"></li>
+				<li  data-target="#slider" data-slide-to="2"></li>
+				<li  data-target="#slider" data-slide-to="3"></li>
+				<li  data-target="#slider" data-slide-to="4"></li>
+			</ol>
+			<!-- arrows -->
+			<a href="#slider" class="left carousel-control" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a href="#slider" class="right carousel-control" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-menu-right"></span>
+			</a>
+		</div>
+	</header>
+	<main>
+		<section class="about">
+			<div class="container">
+				<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 left">
+					<h3>Something about you</h3>
+					<p>In this section, you can specify any information about yourself, insert your photos, your interests and skills. It is also desirable to use tag canvas.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+				</div>
+				<div class="col-xs-12 col-sm-8 col-md-5 col-lg-5 right">
+					<span>Your photo</span>
+					<img src="img/img1.jpg" alt="" class="img-responsive">
+				</div>
+			</div>
+		</section>
+		<section class="registration">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-4 center-block">
+				<h3>Register</h3>
+				<form class="form" onsubmit="return false;">
+					<input type="email" name="email" class="form-control" placeholder="Email">
+					<input type="text" name="password" class="form-control" placeholder="Password">
+					<select class="form-control">
+						<option selected="">Country</option>
+						<option>Country1</option>
+						<option>Country2</option>
+						<option>Country3</option>
+					</select>
+					<input type="submit" class="btn send" value="Enter">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>© 2015 layout</p>
+	</footer>
+</div>
+</body>
+</html>
+<!-- don't forget about section width -->
