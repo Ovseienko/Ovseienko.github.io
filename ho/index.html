@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Катковские</title>
+	<link rel="shortcat icon" href="images/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=cyrillic' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="MainCtrl as main" > <!-- ng-style="{'min-height': winHeight + 'px'}" -->
+	<div class="container-fluid wrapper" ng-class="moveMain">
+		<main class="col-xs-12 col-sm-6 col-md-6 col-lg-7 left">
+			<button class="button more-info" ng-click="moveRight($event)">
+				<i class="fa fa-info"></i>
+				<span class="top"></span>
+				<span class="right"></span>
+				<span class="bottom"></span>
+				<span class="left"></span>
+			</button>
+			<div class="main-text" ng-class="mainText">
+				<h1>Персональные тренеры</h1>
+				<h2>Алексей и Любовь Катковские</h2>
+				<p>Иди к своей цели не смотря ни на что</p>
+				<button class="button contacts" ng-click="showContacts()">Контакты
+					<span class="top"></span>
+					<span class="right"></span>
+					<span class="bottom"></span>
+					<span class="left"></span>
+				</button>
+			</div>
+			<contact></contact>
+			<div class="social"><a href=""><i class="fa fa-facebook-square"></i></a><a href=""><i class="fa fa-vk"></i></a></div> 
+		</main>
+		<aside class="col-xs-12 col-sm-6 col-md-6 col-lg-5 slideshow">
+			<button class="button write" ng-click="showForm()" ng-hide="toHide">
+				<i class="fa fa-envelope"></i>
+				<span class="top"></span>
+				<span class="right"></span>
+				<span class="bottom"></span>
+				<span class="left"></span>
+			</button>
+			<img ng-repeat="slide in slides" class="slide img-responsive" ng-src="{{slide.image}}" ng-hide="!isCurrentSlideIndex($index)" ng-click="nextSlide($index)">
+			<contact-form></contact-form>
+		</aside>
+	</div>
+	<div class="container-fluid hidden-block" ng-class="moveContent">
+		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 ">
+			<h2>Мы предлагаем</h2>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 hidden-content">
+			<h3>Мы все разные. И к каждому нужен индивидуальный подход. Для каждого клиента разрабатывается отдельная программа питания и тренировок.</h3>
+			<p>Каждый из нас сделает все возможное, чтобы вы достигли своей цели и не сошли с намеченного пути</p>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 services-block">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 service-slider-wrapper" ng-class="moveServices">
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 services-item centered" ng-repeat="service in services">
+						<i class="fa {{service.class}}"></i>
+						<h4>{{service.text}}</h4>
+						<ul class="list-unstyled">
+							<li ng-repeat="feature in service.features">{{feature.description}}</li>
+							<li ng-show="service.link" ng-bind-html="service.link"></li>
+						</ul>
+					</div>
+					<a href class="arrow-prev" ng-click="previous()"><i class="fa fa-angle-left"></i></a>
+					<a href class="arrow-next" ng-click="next()"><i class="fa fa-angle-right"></i></a>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 pagination">
+					<a href="" class="prev" ng-click="previous()" ng-class="{'disabled': tog==2}"></a>
+					<a href="" class="next" ng-click="next()" ng-class="{'disabled': tog ==1}"></a>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-2 col-sm-1 col-md-1 col-lg-1 button-block">
+			<button class="button back" ng-click="moveRight($event)">
+				<i class="fa fa-times"></i>
+				<span class="top"></span>
+				<span class="right"></span>
+				<span class="bottom"></span>
+				<span class="left"></span>
+			</button>
+		</div>
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
