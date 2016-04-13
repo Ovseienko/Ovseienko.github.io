@@ -31,4 +31,8 @@ $(function() {
 		$('.mobile-nav').slideToggle('slow');
 		return false;
 	});
+	$('.read-more').click(function(event){
+		event.preventDefault();
+		$(this).prev('.hidden-text').slideToggle('slow');
+	});
 });
