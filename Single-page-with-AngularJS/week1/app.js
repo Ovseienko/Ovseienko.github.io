@@ -38,6 +38,7 @@
 
     $scope.hideMsg = function () {
       $scope.msg = "";
+      $scope.note = "";
     };
 
   }
