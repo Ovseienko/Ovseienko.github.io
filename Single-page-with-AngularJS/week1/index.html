@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CheckApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Week1</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body >
+  <div ng-controller="CheckController" class="col-xs-5 col-sm-5 col-md-5 col-lg-5 container" ng-class="checkClass">
+    <h1 class="text-center">What do you usualy eat for lunch?</h1>
+    <input type="text" ng-model="checkItems" class="form-control " ng-focus="hideMsg()">
+    <span class="note-txt text-muted">{{note}}</span>
+    <button ng-click="check()" class="btn btn-info center-block">Check If Too Much</button>
+    <p class="message text-center" >
+      {{msg}}
+    </p>
+  </div>
+</body>
+</html>

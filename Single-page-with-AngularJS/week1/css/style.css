@@ -1,0 +1,32 @@
+ .container{
+   float: none;
+   margin: 0 auto;
+   padding-top: 50px;
+ }
+ .message{
+   margin: 20px auto;
+   font-size: 20px;
+ }
+ .btn{
+   margin-top: 25px;
+ }
+.success-class input{
+  border: 1px solid green;
+}
+.error-class input{
+  border: 1px solid red;
+}
+.success-class p{
+    color: green;
+}
+.error-class p{
+  color: red;
+}
+.form-control{
+  margin: 20px 0 0;
+}
+.note-txt{
+  font-size: 12px;
+  display: block;
+  height: 12px;
+}
