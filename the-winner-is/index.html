@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>And the winner is...</title>
+	<link rel="shortcut icon" type="image/x-icon" href="lottery.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Lottery game</h1>
+		<div class="winner-block form-row">
+			<span>Winner:</span>
+			<span class="winner-name"></span>
+			<button class="btn chose-winner-btn">New winner</button>
+		</div>
+		<h3>Please enter your data to participate in this lottery</h3>
+		<form class="form">
+			<div class="form-row"><label class="winner-label" for="name">Name:</label><input class="winner-input" type="text" id="name" placeholder="Your name"></div>
+			<div class="form-row"><label class="winner-label" for="surname">Surname:</label><input class="winner-input" type="text" id="surname" placeholder="Your surname"></div>
+			<div class="form-row"><label class="winner-label" for="birthday">Birthday:</label><input class="winner-input" type="text" id="birthday" placeholder="01.01.2001"></div>
+			<div class="form-row"><label class="winner-label" for="email">Email:</label><input class="winner-input" type="text" id="email" placeholder="name@mail.com"></div>
+			<div class="form-row"><label class="winner-label" for="phone">Phone:</label><input  class="winner-input" type="text" id="phone" placeholder="0939280999"></div>
+      		<span class="error-message"></span>
+			<button class="submit-btn btn">Submit</button> 
+			<button type="reset" class="btn clear-btn">Clear</button>
+			
+		</form>
+		<table class=" participants-table">
+			<tr>
+				<td>Name</td>
+				<td>Surname</td>
+				<td>Email</td>
+				<td>Phone number</td>
+				<td>Birthday</td>
+			</tr>		
+		</table>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>	
