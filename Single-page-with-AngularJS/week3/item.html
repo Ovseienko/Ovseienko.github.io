@@ -1,6 +1,4 @@
-<li>
-</li>
-<li ng-repeat="item in ctrl.menuItems">
+<li ng-repeat="item in ctrl.matchingItemsList">
   {{item.name}}
-  <button ng-click="">Remove Item</button>
+  <button ng-click="ctrl.removeItem()" >Remove Item</button>
 </li>
