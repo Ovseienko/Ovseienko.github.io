@@ -1,0 +1,109 @@
+.block2{
+    &__wrapper{
+
+    }
+    &__item{
+
+    }
+}
+.b2-item{
+    &__left{
+        border: 3px solid rgba(0,0,0,0.1);
+        height: 125px;
+        width: 125px;
+        overflow: hidden;
+        padding: 0;
+    }
+    &__right{
+    }
+    &__title{
+        font-size: 20px;
+        font-weight: normal;
+        text-align: left;
+        color: @mainDark;
+        margin-top: 0;
+    }
+    &__descr{
+        font-size: 12px; 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    &__btn{
+        display: inline-block;
+        position: relative;
+        margin: 20px 0;
+        padding: 14px 30px 15px 30px;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+        transition: 0.8s;
+        line-height: 18px;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        background: @secondaryColor;
+        span{
+            position: relative;
+            z-index: 2;
+        }
+        &:after{
+            background: @mainDark;
+            display: block;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            -webkit-transition: 0.8s;
+            -moz-transition: 0.8s;
+            -o-transition: 0.8s;
+            transition: 0.8s;
+            content: '';
+        }
+        &:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+        &:hover:after{
+                background: @mainDark;
+                top: 0;
+                -webkit-transition: 0.4s;
+                -moz-transition: 0.4s;
+                -o-transition: 0.4s;
+                transition: 0.4s;
+        }
+
+    }
+}
+.thumb{
+   position: relative;
+    &__img{
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+        .centered;
+        max-width: inherit;
+    }
+    &__mask{
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+    }
+    &__icon{
+        .centered;
+        color: @secondaryColor;
+        font-size: 25px;
+        &:hover{
+            color: #febe01;
+        }
+    }
+    &:hover{
+        .thumb__mask{
+            display: block;
+        }
+    }
+}

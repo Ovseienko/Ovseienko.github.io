@@ -1,0 +1,55 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background: url(../images/body-bg.jpg) 0 0 repeat;
+}
+.main-wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+//mixins
+.transition(@param, @time, @mode){
+    -webkit-transition: @param @time @mode;
+    -moz-transition:  @param @time @mode;
+    -o-transition:  @param @time @mode;
+    transition:  @param @time @mode;
+}
+.translate(@x:0, @y:-50%){
+    transform: translate(@x,@y);
+    -webkit-transform:translate(@x,@y);
+    -o-transform:translate(@x,@y);
+    -moz-transform: translate(@x,@y);
+    -ms-transform: translate(@x,@y);
+}
+.right{
+    float: right;
+}
+.v-centered{
+    position: absolute;
+    top:50%;
+    .translate();
+}
+.h-centered{
+    position: absolute;
+    left:50%;
+    .translate(-50%, 0);
+}
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.divider{
+    margin: 50px 0 0;
+    height:20px;
+    background: url(../images/icons/arrow-line.png) center 0 no-repeat;
+}
+.title{
+    font-size: 31px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: @mainDark;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}

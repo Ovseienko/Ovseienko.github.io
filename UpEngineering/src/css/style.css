@@ -1,0 +1,423 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+body {
+  font-family: 'Raleway', sans-serif;
+  background: url(../images/body-bg.jpg) 0 0 repeat;
+}
+.main-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+.right {
+  float: right;
+}
+.v-centered {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+}
+.h-centered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.divider {
+  margin: 50px 0 0;
+  height: 20px;
+  background: url(../images/icons/arrow-line.png) center 0 no-repeat;
+}
+.title {
+  font-size: 31px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.nav__link {
+  padding: 22px 30px 22px 30px !important;
+  line-height: inherit !important;
+  border: none;
+  font-size: 21px;
+  color: #fff;
+  z-index: 1;
+}
+.nav__link:hover {
+  background: none !important;
+  color: #fff;
+}
+.nav__link-bg {
+  position: absolute;
+  width: 100%;
+  background: #fe8f01;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+.nav__link.active {
+  color: #fff;
+  background: #fe8f01;
+}
+.nav__item {
+  position: relative;
+}
+.nav__item:hover .nav__link-bg {
+  height: 100%;
+}
+.header {
+  background: #3d3d3d;
+}
+.header__bottom {
+  padding: 20px 0;
+  color: #9b9b9b;
+}
+.header__address {
+  border-left: 1px solid #cecece;
+}
+.header__logo {
+  padding-left: 48px;
+}
+.header__contacts {
+  font-family: Arial, Helvetica, sans-serif;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+}
+.phone-ico,
+.address-ico {
+  position: absolute;
+  font-size: 30px;
+  left: 13px;
+}
+.phone-text,
+.address-text {
+  padding-left: 40px;
+}
+.phone-text p,
+.address-text p {
+  margin: 0;
+  font-size: 12px;
+}
+.slider__wrapper {
+  padding: 30px 0;
+  position: relative;
+}
+.slider__container {
+  height: 556px;
+  width: 100%;
+  padding: 0;
+}
+.slider__inner {
+  height: 100%;
+}
+.slider__item {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.slider__item img {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: initial !important;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+}
+.slider__controls {
+  z-index: 2;
+  left: 50px;
+  top: 50%;
+  position: absolute;
+}
+.slider__controls .left,
+.slider__controls .right {
+  display: inline-block;
+  vertical-align: top;
+  background: rgba(255, 255, 255, 0.33);
+  width: 69px;
+  height: 69px;
+  color: #3d3d3d;
+  line-height: 69px;
+  font-size: 65px;
+  margin-right: 3px;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+.slider__controls .left:hover,
+.slider__controls .right:hover {
+  background: #fe8f01;
+}
+.slider__caption {
+  padding: 0;
+  background: none;
+  line-height: 59px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 49px;
+  text-align: left;
+}
+.slider__caption a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+}
+.block1__title {
+  font-size: 31px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.block1__title p {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 25px;
+}
+.block1__list {
+  padding: 0;
+}
+.block1__item {
+  list-style: none;
+}
+.b1-item__title {
+  min-height: 48px;
+  margin: 17px 0;
+  padding: 0;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+.b1-item__descr {
+  font-size: 12px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.b1-item__top {
+  width: 101px;
+  height: 101px;
+  margin: 0 auto;
+  border-radius: 50px;
+  background: #fe8f01;
+  text-align: center;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.b1-item__top:hover {
+  background: #9b9b9b;
+}
+.b2-item__left {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  height: 125px;
+  width: 125px;
+  overflow: hidden;
+  padding: 0;
+}
+.b2-item__title {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+  color: #3d3d3d;
+  margin-top: 0;
+}
+.b2-item__descr {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.b2-item__btn {
+  display: inline-block;
+  position: relative;
+  margin: 20px 0;
+  padding: 14px 30px 15px 30px;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  line-height: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #fe8f01;
+}
+.b2-item__btn span {
+  position: relative;
+  z-index: 2;
+}
+.b2-item__btn:after {
+  background: #3d3d3d;
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  content: '';
+}
+.b2-item__btn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.b2-item__btn:hover:after {
+  background: #3d3d3d;
+  top: 0;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.thumb {
+  position: relative;
+}
+.thumb__img {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  max-width: inherit;
+}
+.thumb__mask {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+.thumb__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  color: #fe8f01;
+  font-size: 25px;
+}
+.thumb__icon:hover {
+  color: #febe01;
+}
+.thumb:hover .thumb__mask {
+  display: block;
+}
+.bottom-banner {
+  margin: 60px 0;
+  padding: 0;
+  height: 340px;
+  background-image: url(../images/bottom-banner.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.bottom-banner__text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 55px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.footer {
+  padding: 51px 35px 48px 35px;
+  background: #3d3d3d;
+}
+.footer__text {
+  float: right;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+  text-transform: uppercase;
+  color: #fff;
+}
