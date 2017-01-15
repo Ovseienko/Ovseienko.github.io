@@ -254,6 +254,7 @@ body {
 }
 .block1__item {
   list-style: none;
+  margin-bottom: 30px;
 }
 .b1-item__title {
   min-height: 48px;
@@ -420,4 +421,20 @@ body {
   text-align: right;
   text-transform: uppercase;
   color: #fff;
+}
+.partners {
+  padding-bottom: 60px;
+}
+.partners__wrapper {
+  padding: 30px 0;
+}
+.partners__item {
+  margin-bottom: 30px;
+}
+.partners__item img {
+  display: block;
+  max-width: 100%;
+}
+.partners__item:hover {
+  opacity: .8;
 }
